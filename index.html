@@ -353,22 +353,15 @@
     }
 
     .cv-hero-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  display: grid;
-  /* two columns, but we’ll control what spans them */
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
-  grid-auto-rows: auto;
-  column-gap: 3rem;
-  row-gap: 1.75rem;
-  align-items: start;
-}
-/* Make all the hero text (name, subtitle, paragraph, contact, buttons)
-   span across BOTH columns on the top row */
-.cv-hero-left {
-  grid-column: 1 / -1;    /* full width (red box area) */
-}
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
     .cv-hero-left h1 {
       font-size: clamp(2.2rem, 3vw, 2.8rem);
       margin: 0 0 0.5rem;
@@ -395,20 +388,17 @@
     }
 
     /* CONTACT INFO BOX ON LEFT */
-.cv-hero-contact {
-  margin-top: 1.75rem;
-  padding: 1rem 1.25rem;
-  border-radius: 0.9rem;
-  border: 1px solid rgba(148, 163, 184, 0.55);
-  background: rgba(15, 23, 42, 0.7);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #e5e7eb;
+    .cv-hero-contact {
+      margin-top: 1.75rem;
+      padding: 1rem 1.25rem;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(15, 23, 42, 0.7);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #e5e7eb;
+    }
 
-  /* NEW: keep box on the left side only */
-  max-width: 620px;     /* you can adjust 580–650px if you like */
-  margin-right: auto;   /* ensures it hugs the left column */
-}
     .cv-hero-contact p {
       margin: 0.1rem 0;
     }
@@ -459,20 +449,15 @@
       border-style: dashed;
     }
 
-  /* RIGHT SIDE: BIG PHOTO */
-.cv-hero-right {
-  grid-column: 2;  
-  grid-row: 2;      
+    /* RIGHT SIDE: BIG PHOTO */
+    .cv-hero-right {
+      display: flex;
+      justify-content: center;
+    }
 
-  display: flex;
-  justify-content: center;
-  align-self: start;
-
-  margin-top: 2;
-} 
     .cv-hero-photo-wrapper {
       width: 100%;
-      max-width: 200px;        /* controls how big the photo is */
+      max-width: 360px;        /* controls how big the photo is */
       aspect-ratio: 3 / 4;     /* tall rectangle; change to 1 / 1 for square */
       border-radius: 1.5rem;   /* rounded corners */
       overflow: hidden;
@@ -489,23 +474,16 @@
     }
 
     /* MOBILE: stack vertically */
-    
     @media (max-width: 768px) {
-  .cv-hero-inner {
-    grid-template-columns: 1fr;  /* single column */
-    row-gap: 1.75rem;
-  }
+      .cv-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
 
-  .cv-hero-left {
-    grid-column: 1 / -1;         /* full width */
-  }
-
-  .cv-hero-right {
-    grid-column: 1 / -1;         /* photo also full width below */
-    grid-row: auto;
-    margin-top: 1.25rem;
-  }
-}
+      .cv-hero-right {
+        order: -1;  /* photo on top on small screens; remove if you prefer text first */
+      }
+    }
   </style>
 </head>
 <body class="cv-page">
@@ -542,6 +520,9 @@
         <!-- BUTTONS -->
         <div class="cv-hero-actions">
           <a href="https://www.pedsgimind.ca" class="cv-btn">www.pedsgimind.ca</a>
+          <a href="https://www.pedsgimind.ca/cv-portfolio/" class="cv-btn cv-btn-secondary">
+            Online CV &amp; Portfolio
+          </a>
           <a href="mailto:Mohammad.Hussein@pedsgimind.ca" class="cv-btn cv-btn-outline">
             Email Dr. Hussein
           </a>
