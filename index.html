@@ -395,17 +395,20 @@
     }
 
     /* CONTACT INFO BOX ON LEFT */
-    .cv-hero-contact {
-      margin-top: 1.75rem;
-      padding: 1rem 1.25rem;
-      border-radius: 0.9rem;
-      border: 1px solid rgba(148, 163, 184, 0.55);
-      background: rgba(15, 23, 42, 0.7);
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #e5e7eb;
-    }
+.cv-hero-contact {
+  margin-top: 1.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  background: rgba(15, 23, 42, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e5e7eb;
 
+  /* NEW: keep box on the left side only */
+  max-width: 620px;     /* you can adjust 580–650px if you like */
+  margin-right: auto;   /* ensures it hugs the left column */
+}
     .cv-hero-contact p {
       margin: 0.1rem 0;
     }
@@ -459,14 +462,14 @@
    /* RIGHT SIDE: BIG PHOTO */
 .cv-hero-right {
   grid-column: 2 / 3;   /* right column on desktop */
-  grid-row: 2;          /* still the second grid row */
+  grid-row: 2;          /* second row */
   display: flex;
   justify-content: center;
   align-self: start;
 
-  /* pull the photo UP into the empty space beside the contact box */
-  margin-top: -4rem;    /* try -4rem first; adjust to -3.5 or -4.5 if needed */
-} 
+  /* pull photo up so its TOP lines up with the contact box */
+  margin-top: -3rem;    /* tweak: -2.5 (lower) or -3.5 (higher) if needed */
+}
     .cv-hero-photo-wrapper {
       width: 100%;
       max-width: 200px;        /* controls how big the photo is */
@@ -539,9 +542,6 @@
         <!-- BUTTONS -->
         <div class="cv-hero-actions">
           <a href="https://www.pedsgimind.ca" class="cv-btn">www.pedsgimind.ca</a>
-          <a href="https://www.pedsgimind.ca/cv-portfolio/" class="cv-btn cv-btn-secondary">
-            Online CV &amp; Portfolio
-          </a>
           <a href="mailto:Mohammad.Hussein@pedsgimind.ca" class="cv-btn cv-btn-outline">
             Email Dr. Hussein
           </a>
