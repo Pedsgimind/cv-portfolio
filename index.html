@@ -456,16 +456,17 @@
       border-style: dashed;
     }
 
-    /* RIGHT SIDE: BIG PHOTO */
+   /* RIGHT SIDE: BIG PHOTO */
 .cv-hero-right {
   grid-column: 2 / 3;   /* right column on desktop */
-  grid-row: 2;          /* second row (drops photo into yellow box area) */
+  grid-row: 2;          /* still the second grid row */
   display: flex;
   justify-content: center;
   align-self: start;
-  margin-top: 0.5rem;   /* tweak this up/down if you want photo lower/higher */
-}
 
+  /* pull the photo UP into the empty space beside the contact box */
+  margin-top: -4rem;    /* try -4rem first; adjust to -3.5 or -4.5 if needed */
+} 
     .cv-hero-photo-wrapper {
       width: 100%;
       max-width: 300px;        /* controls how big the photo is */
