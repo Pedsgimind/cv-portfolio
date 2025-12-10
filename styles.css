@@ -24,9 +24,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Make links in the blue header readable */
+/* Make links in the turquoise header readable */
 .site-header a {
-  color: #e3f2fd;
+  color: #eaffff;
 }
 
 .site-header a:hover {
@@ -41,13 +41,13 @@ a:hover {
   padding: 0 1.25rem;
 }
 
-/* Header */
+/* Header with faded turquoise gradient */
 .site-header {
   background: linear-gradient(
     135deg,
-    #02030a 0%,
-    #003459 55%,
-    #00a8e8 100%
+    #78d6c6 0%,
+    #20b8a6 55%,
+    #008080 100%
   );
   color: #ffffff;
   padding: 1.5rem 0 1rem;
@@ -105,11 +105,11 @@ a:hover {
   background: #ffffff;
   display: block;
   margin-bottom: 0.75rem;
-  margin-left: auto;  /* pushes the circle to the right inside its column */
+  margin-left: auto;
 }
 
 .languages-card {
-  background: rgba(15, 76, 129, 0.3);
+  background: rgba(32, 184, 166, 0.25);
   border-radius: 0.75rem;
   padding: 0.75rem 1rem;
 }
@@ -139,12 +139,12 @@ a:hover {
 
 .btn.primary {
   background: #ffffff;
-  color: #0b5394;
+  color: #008080;
   border-color: #ffffff;
 }
 
 .btn.primary:hover {
-  background: #e3f2fd;
+  background: #e0fffa;
 }
 
 /* Top navigation */
@@ -162,15 +162,15 @@ a:hover {
 }
 
 .top-nav a {
-  color: #e3f2fd;
+  color: #eaffff;
   padding: 0.25rem 0.7rem;
   border-radius: 999px;
   border: 1px solid transparent;
 }
 
 .top-nav a:hover {
-  border-color: rgba(227, 242, 253, 0.7);
-  background: rgba(13, 71, 161, 0.6);
+  border-color: rgba(224, 255, 250, 0.7);
+  background: rgba(0, 128, 128, 0.5);
 }
 
 /* Main layout */
@@ -190,7 +190,7 @@ a:hover {
 .card-section h2 {
   font-size: 1.25rem;
   margin-bottom: 0.6rem;
-  color: #0b5394;
+  color: #008080;
 }
 
 .card-section h3 {
@@ -221,7 +221,7 @@ a:hover {
 
 .timeline {
   list-style: none;
-  border-left: 2px solid #d0d7e2;
+  border-left: 2px solid #b4dddb;
   padding-left: 1rem;
 }
 
@@ -238,7 +238,7 @@ a:hover {
   width: 0.55rem;
   height: 0.55rem;
   border-radius: 50%;
-  background: #1565c0;
+  background: #20b8a6;
 }
 
 .muted {
