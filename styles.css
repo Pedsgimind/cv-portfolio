@@ -23,6 +23,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 /* Make links in the blue header readable */
 .site-header a {
   color: #e3f2fd;
@@ -32,6 +33,7 @@ a:hover {
   color: #ffffff;
   text-decoration: underline;
 }
+
 .container {
   width: 100%;
   max-width: 1120px;
@@ -41,7 +43,12 @@ a:hover {
 
 /* Header */
 .site-header {
-  background: linear-gradient(135deg, #0b5394, #1565c0);
+  background: linear-gradient(
+    135deg,
+    #02030a 0%,
+    #003459 55%,
+    #00a8e8 100%
+  );
   color: #ffffff;
   padding: 1.5rem 0 1rem;
 }
