@@ -353,14 +353,17 @@
     }
 
     .cv-hero-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
-      gap: 3rem;
-      align-items: center;
-    }
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  /* two columns, but we’ll control what spans them */
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+  grid-auto-rows: auto;
+  column-gap: 3rem;
+  row-gap: 1.75rem;
+  align-items: start;
+}
 
     .cv-hero-left h1 {
       font-size: clamp(2.2rem, 3vw, 2.8rem);
@@ -474,16 +477,23 @@
     }
 
     /* MOBILE: stack vertically */
+    
     @media (max-width: 768px) {
-      .cv-hero-inner {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
+  .cv-hero-inner {
+    grid-template-columns: 1fr;  /* single column */
+    row-gap: 1.75rem;
+  }
 
-      .cv-hero-right {
-        order: -1;  /* photo on top on small screens; remove if you prefer text first */
-      }
-    }
+  .cv-hero-left {
+    grid-column: 1 / -1;         /* full width */
+  }
+
+  .cv-hero-right {
+    grid-column: 1 / -1;         /* photo also full width below */
+    grid-row: auto;
+    margin-top: 1.25rem;
+  }
+}
   </style>
 </head>
 <body class="cv-page">
