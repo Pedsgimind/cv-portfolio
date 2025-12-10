@@ -364,7 +364,11 @@
   row-gap: 1.75rem;
   align-items: start;
 }
-
+/* Make all the hero text (name, subtitle, paragraph, contact, buttons)
+   span across BOTH columns on the top row */
+.cv-hero-left {
+  grid-column: 1 / -1;    /* full width (red box area) */
+}
     .cv-hero-left h1 {
       font-size: clamp(2.2rem, 3vw, 2.8rem);
       margin: 0 0 0.5rem;
@@ -453,10 +457,14 @@
     }
 
     /* RIGHT SIDE: BIG PHOTO */
-    .cv-hero-right {
-      display: flex;
-      justify-content: center;
-    }
+.cv-hero-right {
+  grid-column: 2 / 3;   /* right column on desktop */
+  grid-row: 2;          /* second row (drops photo into yellow box area) */
+  display: flex;
+  justify-content: center;
+  align-self: start;
+  margin-top: 0.5rem;   /* tweak this up/down if you want photo lower/higher */
+}
 
     .cv-hero-photo-wrapper {
       width: 100%;
